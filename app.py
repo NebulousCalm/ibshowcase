@@ -15,17 +15,12 @@ file = gspread.authorize(credentials) # authenticate the JSON key with gspread
 sheet = file.open("ibshowcase") # sheet name (https://docs.google.com/spreadsheets/d/1UjMEkAzH5mcjDG-lLxtNse4xX31RRzdgyey_rMuB484/edit#gid=0)
 sheet = sheet.sheet1 
 
-
-
-
 app = Flask(__name__)
-
-
-
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/', methods=["POST"])
 def form():
