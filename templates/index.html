@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/style.css')}}">
+    <title>Project Showcase</title>
+
+    {% block scripts %}
+        <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    {% endblock %}
+</head>
+<body>
+    <form method="POST">
+        <label for="name">What's your name?</label>
+        <input type="text" name="name">
+
+        <label for="takeaway">What's your takeaway?</label>
+        <input type="text" name="takeaway">
+        
+        <label for="ask">Questions/Comments?</label>
+        <input type="text" name="ask">
+        <button value="submit">Submit</button>
+    </form>
+</body>
+</html>
